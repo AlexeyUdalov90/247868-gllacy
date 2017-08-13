@@ -99,7 +99,6 @@
               <img src="img/popular-img-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             </p>
             <p class="item-prise">310 <span>&#8381;</span><span class="weight">/кг</span></p>
-            <a class="button">Быстрый просмотр</a>
           </li>
           <li class="popular-item">
             <h3>
@@ -109,7 +108,6 @@
               <img src="img/popular-img-2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
             </p>
             <p class="item-prise">380 <span>&#8381;</span><span class="weight">/кг</span></p>
-            <a class="button">Быстрый просмотр</a>
           </li>
           <li class="popular-item">
             <h3>
@@ -119,7 +117,6 @@
               <img src="img/popular-img-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             </p>
             <p class="item-prise">355 <span>&#8381;</span><span class="weight">/кг</span></p>
-            <a class="button">Быстрый просмотр</a>
           </li>
           <li class="popular-item">
             <h3>
@@ -129,7 +126,6 @@
               <img src="img/popular-img-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
             </p>
             <p class="item-prise">415 <span>&#8381;</span><span class="weight">/кг</span></p>
-            <a class="button">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -159,10 +155,13 @@
       
       <section class="subscribe">
         <h2 class="visually-hidden">Подписка на наши новости</h2>
+        <p class="subscribe-text">
+          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+        </p>
         <form class="subscribe-form" method="post" action="">
           <p>
             <label class="visuallu-hidden" for="email">Электронная почта</label>
-            <input type="text" name="email" id="email" placeholder="Электронная почта">
+            <input type="email" name="email" id="email" placeholder="Электронная почта">
           </p>
           <button class="button" type="submit">Отправить</button>
         </form>
@@ -244,7 +243,7 @@
       <h2 class="visually-hidden">Вход в личный кабинет</h2>
       <form class="login-form" method="post" action="#">
         <p>
-          <input type="text" name="login" placeholder="Электронная почта">
+          <input type="email" name="login" placeholder="Электронная почта">
         </p>
         <p>
           <input type="password" name="password" placeholder="Пароль">
@@ -253,6 +252,25 @@
       </form>
       <a href="#">Забыли пароль?</a>
       <a href="#">Новая регистрация</a>
+    </section>
+    
+    <section class="modal modal-feedback">
+      <h2>Мы обязятельно вам ответим!</h2>
+      <form class="feedback-form" method="post" action="#">
+        <p class="feedback-item">
+          <label class="visually-hidden" for="name">Как вас зовут?</label>
+          <input type="text" name="name" id="name" placeholder="Как вас зовут?">
+        </p>
+        <p class="feedback-item">
+          <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
+          <input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p class="feedback-item">
+          <label class="visually-hidden" for="fedback-text">Напишите что-нибудь...</label>
+          <textarea name="fedback-text" id="fedback-text" cols="30" rows="10">Напишите что-нибудь...</textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
     </section>
     
   </body>
