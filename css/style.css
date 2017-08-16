@@ -1,0 +1,25 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #fff;
+  
+  background-color: #87a092;
+}
+
+.action-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.item-title {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.features-title {
+  font-size: 24px;
+  line-height: 30px;
+}
