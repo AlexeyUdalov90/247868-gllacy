@@ -8,6 +8,7 @@ body {
   background-color: #87a092;
 }
 
+.inner-page-title, 
 .action-title {
   font-size: 35px;
   line-height: 41px;
