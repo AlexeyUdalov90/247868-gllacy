@@ -25,24 +25,27 @@
         <ul class="user-navigation">
           <li>
             <a class="link-search">Поиск</a>
-            <section class="search visually-hidden">
+            <section class="search">
               <h2 class="visually-hidden">Поиск по сайту</h2>
               <form class="search-form" method="get" action="#">
                 <p>
+                  <label class="visually-hidden" for="search">Что ищем?</label>
                   <input type="search" name="search" placeholder="Что ищем?">
                 </p>
               </form>
             </section>
           </li>
           <li>
-            <a class="link-login">Вход</a>
-            <section class="login visually-hidden">
+            <a class="link-login" href="login.html">Вход</a>
+            <section class="login">
               <h2 class="visually-hidden">Вход в личный кабинет</h2>
               <form class="login-form" method="post" action="#">
                 <p>
+                  <label class="visually-hidden" for="login">Электронная почта</label>
                   <input type="email" name="login" placeholder="Электронная почта">
                 </p>
                 <p>
+                  <label class="visually-hidden" for="password">Пароль</label>
                   <input type="password" name="password" placeholder="Пароль">
                 </p>
                 <button class="button" type="submit">Войти</button>
@@ -52,12 +55,14 @@
             </section>
           </li>
           <li>
-            <a class="link-basket">2 товара</a>
-            <section class="basket visually-hidden">
+            <a class="link-basket" href="basket.html">2 товара</a>
+            <section class="basket">
               <h2 class="visually-hidden">Корзина</h2>
               <table class="table-basket">
                 <tr>
-                  <td>X</td>
+                  <td>
+                    <button type="button">Удалить из корзины</button>
+                  </td>
                   <td>
                     <img src="sm-ice-creame-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                     Пломбир с апельсиновым джемом
@@ -70,7 +75,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>X</td>
+                  <td>
+                    <button type="button">Удалить из корзины</button>
+                  </td>
                   <td>
                     <img src="sm-ice-creame-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой 
                     из белого шоколада">
