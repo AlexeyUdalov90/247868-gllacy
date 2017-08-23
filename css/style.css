@@ -40,16 +40,7 @@ a {
   font: inherit;
 }
 
-.news-title {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.site-navigation, 
-.user-navigation,
-.site-submenu,
-.slider-list, 
-.actions-list {
+.list {
   padding: 0;
   list-style: none;
 }
@@ -204,14 +195,14 @@ a {
   line-height: 24px;
 }
 
-.login-links a {
+.black-link {
   color: #323232;
   text-decoration: underline;
 }
 
-.login-links a:hover,
-.login-links a:focus,
-.login-links a:active {
+.black-link:hover,
+.black-link:focus,
+.black-link:active {
   color: #e84d37;
 }
 
@@ -238,7 +229,6 @@ a {
   background-color: #7f2134;
   background-image: url(../img/raspberry.jpg);
   background-repeat: no-repeat;
-  background-position: left top;
   background-size: cover;
 }
 
@@ -246,14 +236,136 @@ a {
   background-color: #42271b;
   background-image: url(../img/chocolate.jpg);
   background-repeat: no-repeat;
-  background-position: left top;
   background-size: cover;
+}
+
+.popular-item,
+.catalog-item {
+  position: relative;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.white-link {
+  text-decoration: underline;
+}
+
+.white-link:hover,
+.white-link:focus,
+.white-link:active {
+  color: #ffbc9e;
+}
+
+.popular-item .item-image,
+.catalog-item .item-image {
+  width: 267px;
+  height: 267px;
+  
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.popular-item::before {
+  position: absolute;
+  top: 35px;
+  left: 3px;
+  
+  content: "";
+  display: block;
+  width: 61px;
+  height: 61px;
+  
+  background: url(../img/hit.png) no-repeat left top;
+  border-radius: 50%;
+}
+
+.item-image img {
+  width: 100%;
+  height: auto;
+}
+
+.item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.item-price .weight {
+  font-size: 30px;
+}
+
+.features {
+  color: #323232;
+  
+  background-color: #e3d7bc;
+  background-image: url(../img/wafer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.features .lead {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.features-item p {
+  position: relative;
+  
+  padding-left: 55px;
+}
+
+.features-item p::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.ice-cream p::before {
+  background: url(../img/ice-cream-icon.svg) no-repeat center;
+}
+
+.cow p::before {
+  background: url(../img/cow-icon.svg) no-repeat center;
+}
+
+.leaf p::before {
+  background: url(../img/leaf-icon.svg) no-repeat center;
+}
+
+.termometr p::before {
+  background: url(../img/termometr-icon.svg) no-repeat center;
+}
+
+.news {
+  color: #323232;
+  
+  background-color: #fff;
+  background-image: url(../img/blog-news.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.news-title a {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 
 
 .button {
-  padding: 10px 25px;
+  padding: 10px 20px;
   
   font-family: inherit;
   font-size: 18px;
@@ -275,6 +387,12 @@ a {
   
   border-radius: 30px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.button-fast {
+  padding: 10px 15px;
+  
+  border-radius: 15px/ 50%;
 }
 
 .button:hover,
