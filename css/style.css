@@ -12,8 +12,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -190,6 +190,12 @@ a {
   border-radius: 5px;
 }
 
+.search-form input::placeholder,
+.login-form input::placeholder {
+  font: inherit;
+  color: #999;
+}
+
 .login-links {
   font-size: 13px;
   line-height: 24px;
@@ -362,6 +368,46 @@ a {
   line-height: 30px;
 }
 
+.subscribe {
+  color: #323232;
+
+  background-color: #f8f7f4;
+  background: 
+    linear-gradient(#f8f7f4, #f8f7f4) padding-box,
+    repeating-linear-gradient(-45deg, #fe9e90 0, #fe9e90 12.5%, #f8f7f4 0, #f8f7f4 25%,#92cdff 0, #92cdff 37.5%, #f8f7f4 0, #f8f7f4 50%) 0 / 40px 40px;
+  border: 5px solid transparent;
+  border-radius: 15px;
+}
+
+.subscribe-form input {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  
+  font:inherit;
+  line-height: 24px;
+  
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.subscribe-form input::placeholder {
+  color: #999;
+}
+
+.contacts {
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+  
+  background-color: #fdfefe;
+  border-radius: 15px;
+}
+
+.contacts b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
 
 
 .button {
