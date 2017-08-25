@@ -91,7 +91,6 @@ a {
   font-weight: 400;
   color: #323232;
   
-  background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
@@ -103,8 +102,10 @@ a {
 .site-submenu a{
   display: block;
   padding: 7px 16px;
-  text-decoration: none;
+  
   color: #323232;
+  
+  background-color: #f8f7f4;
 }
 
 .site-submenu li:first-child a {
@@ -135,6 +136,10 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.user-navigation-link svg {
+  vertical-align: middle;
+}
+
 .user-navigation-link:hover,
 .user-navigation-link:focus {
   color: #323232;
@@ -150,6 +155,10 @@ a {
 .user-navigation .basket-full {
   color: #323232;
   background-color: #f8f7f4;
+}
+
+.hover-block {
+  border-top: 5px solid transparent;
 }
 
 .user-navigation form {
@@ -431,7 +440,7 @@ a {
 }
 
 .contacts {
-  padding: 20px;
+  padding: 25px 20px;
   
   font-size: 14px;
   line-height: 20px;
@@ -439,6 +448,11 @@ a {
   
   background-color: #fdfefe;
   border-radius: 15px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .contacts b {
