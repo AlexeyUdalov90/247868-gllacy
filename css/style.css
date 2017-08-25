@@ -225,6 +225,7 @@ a {
 .slider-title {
   font-size: 60px;
   line-height: 60px;
+  text-align: center;
 }
 
 .slider-control {
@@ -245,6 +246,14 @@ a {
 .slider-control:active,
 .slider-controls .current{
   background-color: #fff;
+}
+
+.action-item {
+  padding: 20px;
+}
+
+.action-title {
+  margin: 0;
 }
 
 .action-item p {
@@ -326,6 +335,8 @@ a {
 }
 
 .features {
+  padding: 25px 20px;
+  
   color: #323232;
   
   background-color: #e3d7bc;
@@ -375,6 +386,8 @@ a {
 }
 
 .news {
+  padding: 25px 20px;
+  
   color: #323232;
   
   background-color: #fff;
@@ -390,6 +403,8 @@ a {
 }
 
 .subscribe {
+  padding: 20px;
+  
   color: #323232;
 
   background-color: #f8f7f4;
@@ -416,6 +431,8 @@ a {
 }
 
 .contacts {
+  padding: 20px;
+  
   font-size: 14px;
   line-height: 20px;
   color: #323232;
@@ -429,7 +446,6 @@ a {
   line-height: 24px;
   font-weight: 700;
 }
-
 
 .button {
   padding: 10px 20px;
@@ -475,4 +491,108 @@ a {
     linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
     linear-gradient(to top, #e74a35, #f26843);
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.social-button .image {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.social-list .social-button {
+  display: block;
+  width: 32px;
+  height: 32px;
+  
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social-button:hover .image,
+.social-button:focus .image {
+  fill: #fff;
+}
+
+.social-button:active {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social-button:active .image {
+  fill: #e9e9e9;
+}
+
+.footer-links li {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.footer-links .heart {
+  font-weight: 700;
+}
+
+.footer-links .heart::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  
+  vertical-align: middle;
+  
+  background: url(../img/heart.svg) no-repeat center;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.modal-feedback {
+  position: relative;
+  
+  width: 430px;
+  padding: 20px 25px;
+  
+  color: #323232;
+  
+  background-color: #f8f7f4;
+  border-radius: 15px;
+}
+
+.feedback-title {
+  margin: 0;
+  
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 270px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  
+  resize: none;
+}
+
+.modal-feedback .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;;
+  
+  width: 18px;
+  height: 18px;
+  
+  background: url(../img/cross-big.svg) no-repeat center;
+  border: none;
+  cursor: pointer;
 }
