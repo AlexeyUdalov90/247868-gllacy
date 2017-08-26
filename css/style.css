@@ -573,7 +573,7 @@ a {
 
 .filter-form select {
   width: 195px;
-  height: 35px;
+  height: 36px;
   padding-left: 15px;
   
   font-size: 16px;
@@ -594,6 +594,50 @@ a {
   color: #323232;
   
   background-color: #fff;
+}
+
+.filter-form .range {
+  position: relative;
+  width: 220px;
+  height: 36px;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px / 50%;
+}
+
+.range .range-line {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  
+  width: 180px;
+  height: 4px;
+  
+  background-image: linear-gradient(to right, #d1dad3 0, #d1dad3 20px, #f8f7f4 0, #f8f7f4 123px, #d1dad3 0, #d1dad3 180px);
+  vertical-align: middle;
+}
+
+.filter-form .range::before,
+.filter-form .range::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  
+  width: 20px;
+  height: 23px;
+  
+  background: url(../img/filter-button.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.filter-form .range::before {
+  top: 8px;
+  left: 34px;
+}
+
+.filter-form .range::after {
+  top: 8px;
+  right: 66px;
 }
 
 .richness label,
