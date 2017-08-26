@@ -55,14 +55,12 @@ a {
   display: block;
   padding: 8px 14px;
   border-radius: 18px;
-  border: 1px solid transparent;
 }
 
 .site-navigation > li > a:hover,
 .site-navigation > li > a:focus {
   color: #333;
   background-color: #f7f6f3;
-  border-color: #fff;
 }
 
 .site-navigation > li > a:active {
@@ -225,6 +223,89 @@ a {
 .page-header .info {
   font-weight: 700;
 }
+
+.basket {
+  width: 510px;
+  padding: 10px 15px;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  
+  background-color: #f8f7f4;
+/*
+  background-clip: padding-box;
+  border-top: 5px solid transparent;
+*/
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.table-basket {
+  border-collapse: collapse;
+}
+
+.table-basket td {
+  padding: 10px 5px;
+}
+
+.column-del .delete {
+  width: 12px;
+  height: 12px;
+  
+  background: url(../img/cross-small.svg) no-repeat center;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.column-img .image {
+  width: 32px;
+  height: 32px;
+  
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.column-img img {
+  width: 100%;
+  height: auto;
+}
+
+.column-name {
+  width: 230px;
+}
+
+.column-account {
+  width: 115px;
+  text-align: center;
+}
+
+.column-account .price {
+  color: #999;
+}
+
+.column-cost {
+  width: 70px;
+  text-align: center;
+}
+
+.table-basket .total {
+  padding-top: 15px;
+  padding-right: 0;
+  
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: right;
+  
+  border-top: 1px solid #cacac7;
+}
+ 
+
+
 
 .info .phone {
   font-size: 22px;
@@ -461,6 +542,47 @@ a {
   font-weight: 700;
 }
 
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.filter-form {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter-form fieldset {
+  border: none;
+}
+
+.button-filter {
+  padding: 10px 30px;
+  
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 13px / 50%;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+  color: #323232;
+  
+  background-color: #fff;
+}
+
+.button-filter:active {
+  background-color: #eaeaea;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+
 .button {
   padding: 10px 20px;
   
@@ -486,10 +608,15 @@ a {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.button-fast {
+.button-fast,
+.button-basket {
   padding: 10px 15px;
   
-  border-radius: 15px/ 50%;
+  border-radius: 15px / 50%;
+}
+
+.button-basket {
+  display: inline-block;
 }
 
 .button:hover,
@@ -568,6 +695,7 @@ a {
   
   background-color: #f8f7f4;
   border-radius: 15px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 .feedback-title {
