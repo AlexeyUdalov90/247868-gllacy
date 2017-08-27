@@ -58,7 +58,7 @@
                   <label class="visually-hidden" for="password">Пароль</label>
                   <input type="password" name="password" id="password" placeholder="Пароль">
                 </p>
-                <button class="button" type="submit">Войти</button>
+                <button class="button login-button" type="submit">Войти</button>
               </form>
               <div class="login-links">
                 <a class="black-link" href="#">Забыли пароль?</a>
@@ -67,7 +67,7 @@
             </section>
           </li>
           <li>
-            <a class="user-navigation-link basket-full" href="basket.html">
+            <a class="link-basket basket-full" href="basket.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.03L6.922 13h10.45l1.176-8.97"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.03L5.422 0H0v2h3.64l1.5 13h13.988l1.7-12.97H5.657zM17.372 13H6.922L5.888 4.03h12.66L17.372 13z"/></svg>
               2 товара
             </a>
@@ -154,7 +154,7 @@
             </select>
           </p>
           <div class="filter-form-item">
-            <label>Цена: 100 руб. - 500 руб.</label>
+            <p class="range-title">Цена: 100 руб. - 500 руб.</p>
             <div class="range">
               <div class="range-line"></div>
             </div>
@@ -190,7 +190,7 @@
             <legend>Наполнители:</legend>
             <p class="filter-form-item">
               <label>
-                <input class="visually-hidden" type="checkbox" name="chocolate" checked disabled>
+                <input class="visually-hidden" type="checkbox" name="chocolate" checked>
                 <span class="checkbox-control"></span>шоколадные
               </label>
             </p>
@@ -360,13 +360,23 @@
         </ul>
         
         <ul class="paginator list">
-          <li><a href="#"><span class="visually-hidden">Назад</span>&lsaquo;</a></li>
-          <li class="current"><a>1</a></li>
+          <li>
+            <a class="prev disabled" href="#">
+              <span class="visually-hidden">Назад</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path class="svg-img" fill="#fff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/></svg>
+            </a>
+          </li>
+          <li><a class="current">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
-          <li><a href="#"><span class="visually-hidden">Вперед</span>&rsaquo;</a></li>
+          <li>
+            <a class="next" href="#">
+              <span class="visually-hidden">Вперед</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path class="svg-img" fill="#fff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/></svg>
+            </a>
+          </li>
         </ul>
       </section>
       
@@ -419,7 +429,7 @@
       </ul>
       
       <p class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логотип HTML Academy"></a>
+        <a class="logo-HTML-Academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логотип HTML Academy"></a>
         Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="white-link">HTML Academy</a><span> &copy;</span> 2017
       </p>
     </footer>
