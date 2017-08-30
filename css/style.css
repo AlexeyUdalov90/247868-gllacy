@@ -51,6 +51,10 @@ img {
   margin: 0 auto;
 }
 
+.wrapper {
+  padding: 0 2.3%;
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -132,7 +136,7 @@ img {
 /*-----------------------------------------NAVIGATION-------------------------------------------*/
 
 .page-header {
-  padding: 10px 2.3% 0 2.3%;
+  padding-top: 10px;
 }
 
 .main-navigation {
@@ -316,6 +320,7 @@ img {
 .hover-block {
   position: absolute;
   top: -9999em;
+  z-index: 1;
   
   border-top: 5px solid transparent;
 }
@@ -484,7 +489,6 @@ body > input[type="radio"] {
   position: relative;
   
   margin-bottom: 40px;
-  padding: 0 2.3%;
 }
 
 .slider-list {
@@ -565,9 +569,6 @@ body > input[type="radio"] {
 }
 
 /*--------------------------------------------INDEX-CONTENT------------------------------------------*/
-.actions {
-  padding: 0 2.3%;
-}
 
 .actions-list {
   position: relative;
@@ -877,6 +878,10 @@ body > input[type="radio"] {
 }
 
 /*-----------------------------------INNER PAGE-CONTENT-------------------------------------*/
+
+.inner-page-title {
+  margin: 0;
+}
 
 .breadcrumbs li {
   position: relative;
@@ -1256,7 +1261,6 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   justify-content: space-between;
   
   height: 100px;
-  
 }
 
 .social-list {
