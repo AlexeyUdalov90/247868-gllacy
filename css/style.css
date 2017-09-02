@@ -464,6 +464,7 @@ img {
 }
 
 .page-header .info {
+  float: right;
   margin: 0;
   
   font-size: 14px;
@@ -490,7 +491,7 @@ body > input[type="radio"] {
 }
 
 .slider-list {
-  padding-top: 275px;
+  padding-top: 320px;
   
   text-align: center;
 }
@@ -636,12 +637,10 @@ body > input[type="radio"] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  
-  margin-bottom: 40px;
 }
 
 .catalog-list {
-  margin-bottom: 0;
+  margin-bottom: 45px;;
 }
 
 .popular-item,
@@ -654,6 +653,7 @@ body > input[type="radio"] {
   
   width: 267px;
   margin-right: 26px;
+  margin-bottom: 40px;
 }
 
 .item-link {
@@ -664,6 +664,11 @@ body > input[type="radio"] {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+}
+
+.popular-item:hover .item-link,
+.catalog-item:hover .item-link {
+  z-index: 2;
 }
 
 .popular-item:nth-child(4n),
@@ -723,7 +728,8 @@ body > input[type="radio"] {
   font-size: 30px;
 }
 
-.popular-item .card-bg {
+.popular-item .card-bg,
+.catalog-item .card-bg{
   position: absolute;
   top: -10px;
   left: -10px;
@@ -751,7 +757,8 @@ body > input[type="radio"] {
   margin-top: auto;
 }
 
-.popular-item:hover .card-bg {
+.popular-item:hover .card-bg,
+.catalog-item:hover .card-bg {
   visibility: visible;
 }
 
@@ -943,6 +950,11 @@ body > input[type="radio"] {
 
 /*-----------------------------------INNER PAGE-CONTENT-------------------------------------*/
 
+.inner-page-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .inner-page-title h1 {
   margin: 0;
 }
@@ -970,6 +982,12 @@ body > input[type="radio"] {
   display: none;
 }
 
+.catalog {
+  margin-bottom: 10px;
+  
+  background-clip: padding-box;
+}
+
 /*-------------------------------------------FILTER-----------------------------------------------*/
 
 .filter-form {
@@ -993,6 +1011,9 @@ body > input[type="radio"] {
   color: #fff;
   
   background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(../img/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 172px center;
   border: none;
   border-radius: 20px;
   -webkit-appearance: none;
@@ -1010,6 +1031,7 @@ body > input[type="radio"] {
   color: #323232;
   
   background-color: #fff;
+  background-image: url(../img/select-arrow-bl.svg);
 }
 
 .filter-form .range {
@@ -1059,7 +1081,7 @@ body > input[type="radio"] {
 .richness label,
 .filler label {
   position: relative;
-  padding-left: 33px;
+  padding-left: 30px;
   
   font-size: 16px;
   line-height: 18px;
@@ -1071,11 +1093,11 @@ body > input[type="radio"] {
 
 .richness input[type="radio"] + .radio-indicator {
   position: absolute;
-  top: -3px;
+  top: -2px;;
   left: 0;
   
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   
   border: 4px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
@@ -1084,8 +1106,8 @@ body > input[type="radio"] {
 .richness input[type="radio"]:checked + .radio-indicator::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 3px;
   
   width: 8px;
   height: 8px;
@@ -1118,11 +1140,11 @@ input[type="radio"]:checked:disabled:focus + .radio-indicator::after{
 
 .filler input[type="checkbox"] + .checkbox-control {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
@@ -1169,7 +1191,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 13px / 50%;
+  border-radius: 20px / 50%;
   box-shadow: inset 0 0 0 2px #fff;
 }
 
@@ -1185,16 +1207,94 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.4);
 }
 
+.filter-form .select-container,
+.filter-form .range-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.select-container label {
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.range-container p {
+  padding-left: 15px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.filter-form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  padding: 0;
+  margin-right: 15px;
+}
+
+.filter-form legend {
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px / 50%;
+}
+
+.group p {
+  margin: 0;
+}
+
+.richness p {
+  margin-right: 20px;
+}
+
+.filler p {
+  margin-right: 25px;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  margin-bottom: 40px;
+}
+
+.filter-form .button-filter {
+  align-self: flex-end;
+}
+
+/*-------------------------------PAGINATOR----------------------------*/
+
 .paginator {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  
+  padding-bottom: 30px;
 }
 
 .paginator a {
   display: block;
   min-width: 25px;
   height: 25px;
+  margin-right: 5px;
   
   font-size: 16px;
   line-height: 25px;
@@ -1273,7 +1373,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 .button-basket {
   padding: 10px 15px;
   
-  border-radius: 15px / 50%;
+  border-radius: 20px / 50%;
 }
 
 .button:hover,

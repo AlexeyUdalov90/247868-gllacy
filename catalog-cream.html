@@ -154,7 +154,7 @@
       <section class="filter content-wrapper">
         <h2 class="visually-hidden">Фильр мороженого</h2>
         <form class="filter-form" method="get" action="#">
-          <p class="filter-form-item">
+          <p class="filter-form-item select-container">
             <label for="sorting">Сортировка:</label>
             <select name="sorting" id="sorting">
               <option value="1">по популярности</option>
@@ -163,7 +163,7 @@
               <option value="4">по жирности</option>
             </select>
           </p>
-          <div class="filter-form-item">
+          <div class="filter-form-item range-container">
             <p class="range-title">Цена: 100 руб. - 500 руб.</p>
             <div class="range">
               <div class="range-line"></div>
@@ -171,15 +171,16 @@
           </div>
           <fieldset class="richness">
             <legend>Жирность:</legend>
+            <div class="group">
             <p class="filter-form-item">
               <label>
-                <input class="visually-hidden" type="radio" name="richness" value="0" checked>
+                <input class="visually-hidden" type="radio" name="richness" value="0">
                 <span class="radio-indicator"></span>0%
               </label>
             </p>
             <p class="filter-form-item">
               <label>
-                <input class="visually-hidden" type="radio" name="richness" value="to-10">
+                <input class="visually-hidden" type="radio" name="richness" value="to-10" checked>
                 <span class="radio-indicator"></span>до 10%
               </label>
             </p>
@@ -195,9 +196,11 @@
                 <span class="radio-indicator"></span>выше 30%
               </label>
             </p>
+            </div>
           </fieldset>
           <fieldset class="filler">
             <legend>Наполнители:</legend>
+            <div class="group">
             <p class="filter-form-item">
               <label>
                 <input class="visually-hidden" type="checkbox" name="chocolate" checked>
@@ -228,12 +231,13 @@
                 <span class="checkbox-control"></span>джем
               </label>
             </p>
+            </div>
           </fieldset>
           <button class="button-filter" type="submit">Применить</button>
         </form>
       </section>
       
-      <section class="catalog content-wrapper">
+      <section class="catalog content-wrapper white-underline">
         <h2 class="visually-hidden">Список сливочного мороженного</h2>
         <ul class="catalog-list list">
           <li class="catalog-item">
@@ -244,7 +248,9 @@
               </div>
               <p class="item-price">310 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -255,7 +261,9 @@
               </div>
               <p class="item-price">380 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -266,7 +274,9 @@
               </div>
               <p class="item-price">355 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -277,7 +287,9 @@
               </div>
               <p class="item-price">415 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -288,7 +300,9 @@
               </div>
               <p class="item-price">325 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -299,7 +313,9 @@
               </div>
               <p class="item-price">410 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -310,7 +326,9 @@
               </div>
               <p class="item-price">375 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -321,7 +339,9 @@
               </div>
               <p class="item-price">320 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -332,7 +352,9 @@
               </div>
               <p class="item-price">440 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -343,7 +365,9 @@
               </div>
               <p class="item-price">435 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -354,7 +378,9 @@
               </div>
               <p class="item-price">355 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           
           <li class="catalog-item">
@@ -365,9 +391,10 @@
               </div>
               <p class="item-price">420 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
-          
         </ul>
         
         <ul class="paginator list">
@@ -430,10 +457,10 @@
             <a href="#" class="white-link"><span class="white-underline">Для поставщиков</span></a>
           </li>
           <li>
-            <a href="#" class="white-link"><span class="white-underline">О производстве</span></a>
+            <a href="#" class="white-link"><span class="white-underline">Наши документы</span></a>
           </li>
           <li>
-            <a href="#" class="white-link"><span class="white-underline">Наши документы</span></a>
+            <a href="#" class="white-link"><span class="white-underline">О производстве</span></a>
           </li>
           <li>
             <a href="#" class="white-link"><span class="white-underline">Экологические стандарты</span></a>
