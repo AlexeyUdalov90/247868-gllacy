@@ -230,10 +230,13 @@ img {
   opacity: 1;
 }
 
-.site-submenu li:first-child {
+.site-submenu li:first-child a {
   font-weight: 700;
   
-  border-bottom: 1px solid #000;
+  background-image: linear-gradient(to right, rgba(50, 50, 50, 0.3) 0, rgba(50, 50, 50, 0.3) 100%);
+  background-position: center 100%;
+  background-size: 90% 1px;
+  background-repeat: no-repeat;
 }
 
 .site-submenu a{
@@ -1424,7 +1427,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 
 /*-----------------------------------------------FOOTER-------------------------------------------*/
 
-.footer-flex {
+.page-footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1504,10 +1507,15 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 /*-------------------------------------------FEEDBACK----------------------------------------------*/
 
 .modal-feedback {
-  position: relative;
+  position: fixed;
+  top: 340px;
+  left: 50%;
+  
+  display: none;
   
   width: 430px;
   padding: 20px 25px;
+  margin-left: -215px;
   
   color: #323232;
   
@@ -1517,10 +1525,27 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 
 .feedback-title {
   margin: 0;
+  margin-bottom: 20px;
   
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.feedback-form p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-form p:last-of-type {
+  margin-bottom: 25px;
 }
 
 .feedback-form input,
@@ -1545,24 +1570,39 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   position: absolute;
   top: 12px;
   left: 15px;
+  
   font: inherit;
+  color: #999;
+  
   transition: all 0.5s;
   pointer-events: none;
 
 }
 
 input:focus ~ .label-box label,
+textarea:focus ~ .label-box label {
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  
+  transform: translateY(-28px);
+}
+
 input:valid ~ .label-box label,
-textarea:focus ~ .label-box label, 
 textarea:valid ~ .label-box label {
-  font-size: 12px;
-  transform: translateY(-35px);
+  font-size: 11px;
+  line-height: 13px;
+  
+  transform: translateY(-28px);
 }
 
 .feedback-form textarea {
   width: 100%;
-  
   resize: none;
+}
+
+.feedback-form .button {
+  align-self: flex-end;
 }
 
 .modal-feedback .close {
