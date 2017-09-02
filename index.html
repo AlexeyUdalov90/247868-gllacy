@@ -14,9 +14,8 @@
     <input type="radio" id="control-3" name="toggle">
    
     <div class="site-wrapper">
-      <div class="content-wrapper">
        
-       <header class="page-header wrapper">
+       <header class="page-header content-wrapper">
 
         <nav class="main-navigation flex-container">
           <a class="page-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного «Gllacy»"></a>
@@ -96,7 +95,7 @@
      
       <h1 class="visually-hidden">Магазин мороженного «Gllacy»</h1>
       
-      <div class="wrapper">
+      <div class="content-wrapper">
         <section class="slider">
         <h2 class="visually-hidden">Наши предложения</h2>
         <ul class="slider-list list">
@@ -122,12 +121,13 @@
         </section>
       </div>
       
-      <section class="actions wrapper">
+      <section class="actions content-wrapper">
         <h2 class="visually-hidden">Наши акции</h2>
         <ul class="actions-list list">
           <li class="action-item raspberry">
             <h3 class="action-title">Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+            </p>
             <a class="button" href="#">Хочу варенье!</a>
           </li>
           <li class="action-item chocolate">
@@ -138,11 +138,11 @@
         </ul>
       </section>
       
-      <section class="popular wrapper">
+      <section class="popular content-wrapper">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list list">
           <li class="popular-item">
-            <a class="item-link" href="ice-cream-page.html">
+            <a class="item-link popular-link" href="ice-cream-page.html">
               <h3 class="item-title white-link">
                 <span class="white-underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               </h3>
@@ -151,42 +151,50 @@
               </div>
               <p class="item-price">310 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button button-fast">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="popular-item">
-            <a class="item-link" href="ice-cream-page.html">
+            <a class="item-link popular-link" href="ice-cream-page.html">
               <h3 class="item-title white-link"><span class="white-underline">Сливочно-кофейное с кусочками шоколада</span></h3>
               <div class="item-image">
                 <img src="img/ice-cream-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               </div>
               <p class="item-price">380 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button button-fast">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="popular-item">
-            <a class="item-link" href="ice-cream-page.html">
+            <a class="item-link popular-link" href="ice-cream-page.html">
               <h3 class="item-title white-link"><span class="white-underline">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
               <div class="item-image">
                 <img src="img/ice-cream-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               </div>
               <p class="item-price">355 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button button-fast">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="popular-item">
-            <a class="item-link" href="ice-cream-page.html">
+            <a class="item-link popular-link" href="ice-cream-page.html">
               <h3 class="item-title white-link"><span class="white-underline">Сливочное крем-брюле с карамельной подливкой</span></h3>
               <div class="item-image">
                 <img src="img/ice-cream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               </div>
               <p class="item-price">415 <span>&#8381;</span><span class="weight">/кг</span></p>
             </a>
-            <button type="button" class="button button-fast">Быстрый просмотр</button>
+            <div class="card-bg">
+              <button type="button" class="button button-fast">Быстрый просмотр</button>
+            </div>
           </li>
         </ul>
       </section>
       
-      <div class="wrapper">
+      <div class="content-wrapper">
         <section class="features">
           <h2 class="visually-hidden">О нас</h2>
           <p class="lead">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
@@ -207,7 +215,7 @@
         </section>
       </div>
       
-      <div class="news-and-subscribe wrapper">
+      <div class="news-and-subscribe content-wrapper">
         <article class="news">
           <span>Новое в нашем блоге</span>
           <h2 class="news-title"><a class="black-link" href="#"><span class="black-underline">10 способов сервировки фруктовых щербетов к столу</span></a></h2>
@@ -252,8 +260,8 @@
       </div>
     </main>
     
-    <footer class="page-footer container">
-      <div class="footer-flex wrapper">
+    <footer class="page-footer">
+      <div class="footer-flex content-wrapper">
         <div class="footer-social">
           <span class="visually-hidden">«Gllacy» в соцсетях</span>
           <ul class="social-list list">
@@ -289,10 +297,10 @@
             <a href="#" class="white-link"><span class="white-underline">Для поставщиков</span></a>
           </li>
           <li>
-            <a href="#" class="white-link"><span class="white-underline">О производстве</span></a>
+            <a href="#" class="white-link"><span class="white-underline">Наши документы</span></a>
           </li>
           <li>
-            <a href="#" class="white-link"><span class="white-underline">Наши документы</span></a>
+            <a href="#" class="white-link"><span class="white-underline">О производстве</span></a>
           </li>
           <li>
             <a href="#" class="white-link"><span class="white-underline">Экологические стандарты</span></a>
@@ -338,7 +346,7 @@
       </button>
     </section>
     
-     </div>
+     
    </div>
    
   </body>

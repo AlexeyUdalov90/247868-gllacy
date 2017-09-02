@@ -22,7 +22,8 @@ img {
 }
 
 .site-wrapper {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
   
   background-repeat: no-repeat;
   background-position: top center;
@@ -47,12 +48,8 @@ img {
 }
 
 .content-wrapper {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.wrapper {
   padding: 0 27px;
+  
 }
 
 .visually-hidden {
@@ -68,7 +65,7 @@ img {
   overflow: hidden;
 }
 
-.inner-page-title, 
+.inner-page-title h1, 
 .action-title {
   font-size: 35px;
   line-height: 41px;
@@ -139,15 +136,18 @@ img {
   padding-top: 10px;
 }
 
+.page-header .page-logo {
+  display: block;
+  width: 154px;
+  height: 64px;
+  margin-right: 10px;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-
-.main-navigation .page-logo {
-  margin-right: 10px;
 }
 
 .site-navigation {
@@ -383,6 +383,7 @@ img {
   
   font-size: 13px;
   line-height: 24px;
+  font-weight: 500;
 }
 
 .basket {
@@ -398,10 +399,6 @@ img {
   color: #323232;
   
   background-color: #f8f7f4;
-/*
-  background-clip: padding-box;
-  border-top: 5px solid transparent;
-*/
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
@@ -493,7 +490,7 @@ body > input[type="radio"] {
 }
 
 .slider-list {
-  padding-top: 270px;
+  padding-top: 275px;
   
   text-align: center;
 }
@@ -507,7 +504,7 @@ body > input[type="radio"] {
   height: 115px;
   margin: 0;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   
   font-weight: 700;
   font-size: 60px;
@@ -583,10 +580,15 @@ body > input[type="radio"] {
 }
 
 .action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
   width: 560px;
   margin-right: 26px;
   
   padding: 20px;
+  padding-bottom: 25px;
   box-sizing: border-box;
   
   border-radius: 15px;
@@ -598,15 +600,20 @@ body > input[type="radio"] {
 
 .action-title {
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .action-item p {
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   
   font-size: 18px;
   line-height: 22px;
+}
+
+.action-item .button {
+  align-self: flex-end;
 }
 
 .actions-list .raspberry {
@@ -639,16 +646,14 @@ body > input[type="radio"] {
 
 .popular-item,
 .catalog-item {
+  position: relative;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   
   width: 267px;
   margin-right: 26px;
-  
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .item-link {
@@ -675,7 +680,7 @@ body > input[type="radio"] {
   border-radius: 50%;
 }
 
-.item-link::before {
+.popular-link::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -689,13 +694,12 @@ body > input[type="radio"] {
   border-radius: 50%;
 }
 
-.item-image img {
-  width: 100%;
-  height: auto;
-}
-
 .popular-item .item-title,
 .catalog-item .item-title {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  
   font: inherit;
   text-align: center;
 }
@@ -719,8 +723,40 @@ body > input[type="radio"] {
   font-size: 30px;
 }
 
+.popular-item .card-bg {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+  
+  visibility: hidden;
+  
+  width: 100%;
+  height: 120%;
+  padding: 10px;
+  padding-bottom: 20px;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-bg .button-fast {
+  margin-top: auto;
+}
+
+.popular-item:hover .card-bg {
+  visibility: visible;
+}
+
 .features {
-  padding: 25px 20px;
+  padding: 25px 20px 15px;
   margin-bottom: 40px;
   
   color: #323232;
@@ -733,7 +769,7 @@ body > input[type="radio"] {
 
 .features .lead {
   margin: 0;
-  margin-bottom: 10px;;
+  margin-bottom: 5px;
   
   font-size: 24px;
   line-height: 30px;
@@ -759,7 +795,7 @@ body > input[type="radio"] {
 .features-item p {
   position: relative;
   
-  padding: 10px 0 10px 55px;
+  padding: 15px 0 10px 55px;
   margin: 0;
 }
 
@@ -794,7 +830,7 @@ body > input[type="radio"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   
   margin-bottom: 40px;
 }
@@ -802,6 +838,7 @@ body > input[type="radio"] {
 .news {
   width: 560px;
   padding: 25px 20px;
+  margin-right: 26px;
   box-sizing: border-box;
   
   color: #323232;
@@ -813,6 +850,12 @@ body > input[type="radio"] {
   border-radius: 15px;
 }
 
+.news-title {
+  width: 290px;
+  margin: 0;
+  margin-top: 5px;
+}
+
 .news-title a {
   font-size: 24px;
   line-height: 30px;
@@ -820,7 +863,7 @@ body > input[type="radio"] {
 
 .subscribe {
   width: 560px;
-  padding: 20px;
+  padding: 25px 20px 30px;
   box-sizing: border-box;
   
   color: #323232;
@@ -833,6 +876,11 @@ body > input[type="radio"] {
   border-radius: 15px;
 }
 
+.subscribe p {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
 .subscribe-form {
   display: flex;
   flex-direction: row;
@@ -841,6 +889,7 @@ body > input[type="radio"] {
 
 .subscribe-form p {
   flex-grow: 1;
+  margin: 0;
   margin-right: 10px;
 }
 
@@ -870,7 +919,7 @@ body > input[type="radio"] {
   right: 27px;
   
   width: 252px;
-  padding: 25px 20px;
+  padding: 30px 25px;
   
   font-size: 14px;
   line-height: 20px;
@@ -882,6 +931,7 @@ body > input[type="radio"] {
 
 .contacts p {
   margin: 0;
+  padding: 0;
   margin-bottom: 25px;
 }
 
@@ -893,7 +943,7 @@ body > input[type="radio"] {
 
 /*-----------------------------------INNER PAGE-CONTENT-------------------------------------*/
 
-.inner-page-title {
+.inner-page-title h1 {
   margin: 0;
 }
 
@@ -949,6 +999,10 @@ body > input[type="radio"] {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
+}
+
+.filter-form select::-ms-expand {
+  display: none;
 }
 
 .filter-form select:hover,
@@ -1178,6 +1232,8 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 /*------------------------------------------BUTTON------------------------------------------*/
 
 .button {
+  display: inline-block;
+  vertical-align: top;
   padding: 10px 20px;
   
   font-family: inherit;
@@ -1204,10 +1260,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 }
 
 .slider-button {
-  display: inline-block;
-  vertical-align: top;
-  
-  padding: 12px 50px;
+  padding: 10px 40px;
   
   font-size: 32px;
   line-height: 44px;
@@ -1274,7 +1327,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 .footer-flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   
   height: 100px;
 }
@@ -1287,6 +1340,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   
   width: 267px;
   padding-top: 30px;
+  margin-right: 155px;
 }
 
 .social-list-item {
@@ -1297,10 +1351,11 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
   
   width: 350px;
+  padding-top: 30px;
 }
 
 .footer-links li {
@@ -1332,8 +1387,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 .footer-copyright {
   display: flex;
   flex-direction: column;
-  
-  width: 210px;
+  margin-left: auto;
   
   font-size: 12px;
   line-height: 18px;
@@ -1341,6 +1395,7 @@ input[type="checkbox"]:checked:disabled:focus + .checkbox-control::after {
 
 .footer-copyright .logo-HTML-Academy {
   display: inline-block;
+  vertical-align: top;
   width: 110px;
   height: 40px;
   
