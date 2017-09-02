@@ -326,6 +326,7 @@ img {
 .basket{
   position: absolute;
   top: -9999em;
+  right: 0;
   z-index: 1;
   
   border-top: 5px solid transparent;
@@ -756,8 +757,8 @@ body > input[type="radio"] {
   font-size: 30px;
 }
 
-.popular-item .card-bg,
-.catalog-item .card-bg{
+.popular-item .card-background,
+.catalog-item .card-background{
   position: absolute;
   top: -10px;
   left: -10px;
@@ -775,18 +776,18 @@ body > input[type="radio"] {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.card-bg {
+.card-background {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card-bg .button-fast {
+.card-background .button-fast {
   margin-top: auto;
 }
 
-.popular-item:hover .card-bg,
-.catalog-item:hover .card-bg {
+.popular-item:hover .card-background,
+.catalog-item:hover .card-background {
   visibility: visible;
 }
 
