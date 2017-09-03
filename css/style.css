@@ -21,6 +21,12 @@ img {
   height: auto;
 }
 
+.viewport {
+  width: 100%;
+  
+  transition: background-color 0.5s ease;
+}
+
 .site-wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -28,8 +34,7 @@ img {
   background-repeat: no-repeat;
   background-position: top center;
   
-  transition: background-image 0.5s ease,
-              background-color 0.5s ease;
+  transition: background-image 0.5s ease;
 }
 
 .site-wrapper::before,
@@ -566,30 +571,39 @@ body > input[type="radio"] {
   cursor: pointer;
 }
 
-#control-1:checked ~ .site-wrapper .slide-1,
-#control-2:checked ~ .site-wrapper .slide-2,
-#control-3:checked ~ .site-wrapper .slide-3 {
+#control-1:checked ~ .viewport .slide-1,
+#control-2:checked ~ .viewport .slide-2,
+#control-3:checked ~ .viewport .slide-3 {
   display: block;
 }
 
-#control-1:checked ~ .site-wrapper {
+#control-1:checked ~ .viewport {
   background-color: #87a092;
+}
+
+#control-1:checked ~ .viewport > .site-wrapper{
   background-image: url(../img/slide-1.png);
 }
 
-#control-2:checked ~ .site-wrapper {
+#control-2:checked ~ .viewport {
   background-color: #8996a6;
+}
+
+#control-2:checked ~ .viewport > .site-wrapper{
   background-image: url(../img/slide-2.png);
 }
 
 #control-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
+}
+
+#control-3:checked ~ .viewport > .site-wrapper{
   background-image: url(../img/slide-3.png);
 }
 
-#control-1:checked ~ .site-wrapper label[for="control-1"],
-#control-2:checked ~ .site-wrapper label[for="control-2"],
-#control-3:checked ~ .site-wrapper label[for="control-3"] {
+#control-1:checked ~ .viewport label[for="control-1"],
+#control-2:checked ~ .viewport label[for="control-2"],
+#control-3:checked ~ .viewport label[for="control-3"] {
   background-color: #fff;
 }
 
