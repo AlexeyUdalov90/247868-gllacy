@@ -230,7 +230,9 @@ img {
   opacity: 0;
 }
 
-.site-navigation-item:hover .site-submenu {
+.site-navigation-item:hover .site-submenu,
+.site-navigation-item a:focus ~ .site-submenu,
+.site-submenu > a:focus {
   top: auto;
   left: 0;
   opacity: 1;
@@ -593,7 +595,7 @@ body > input[type="radio"] {
   background-image: url(../img/slide-2.png);
 }
 
-#control-3:checked ~ .site-wrapper {
+#control-3:checked ~ .viewport {
   background-color: #9d8b84;
 }
 
@@ -650,6 +652,7 @@ body > input[type="radio"] {
 }
 
 .action-item p {
+  width: 100%;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -707,6 +710,8 @@ body > input[type="radio"] {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  
+   width: 100%;
 }
 
 .popular-item:hover .item-link,
@@ -1441,7 +1446,7 @@ input[type="checkbox"]:focus + .checkbox-control
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.button-contacts {
+.button-feedback {
   width: 100%;
 }
 
@@ -1454,7 +1459,8 @@ input[type="checkbox"]:focus + .checkbox-control
   width: 32px;
   height: 32px;
   
-  border: 3px solid rgba(255, 255, 255, 0.5);
+/*  border: 3px solid rgba(255, 255, 255, 0.5);*/
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 
@@ -1464,7 +1470,8 @@ input[type="checkbox"]:focus + .checkbox-control
 }
 
 .social-button:active {
-  border-color: rgba(255, 255, 255, 0.7);
+/*  border-color: rgba(255, 255, 255, 0.7);*/
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .social-button:active .image {
@@ -1494,6 +1501,18 @@ input[type="checkbox"]:focus + .checkbox-control
 
 .social-list-item {
   margin-right: 10px;
+}
+
+.social-list-item svg {
+  width: 32px;
+  height: 32px;
+  
+  text-align: center;
+  
+/*
+  text-align: center;
+  vertical-align: middle;
+*/
 }
 
 .footer-links {
@@ -1552,21 +1571,25 @@ input[type="checkbox"]:focus + .checkbox-control
 
 /*-------------------------------------------FEEDBACK----------------------------------------------*/
 
-.modal-feedback {
-  position: fixed;
-  top: 340px;
-  left: 50%;
-  
+.modal {
   display: none;
-  
-  width: 430px;
-  padding: 20px 25px;
-  margin-left: -215px;
   
   color: #323232;
   
   background-color: #f8f7f4;
   border-radius: 15px;
+}
+
+.modal-feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  
+  width: 430px;
+  padding: 20px 25px;
+  margin-top: -215px;
+  margin-left: -215px;
 }
 
 .feedback-title {
@@ -1662,4 +1685,22 @@ textarea:valid ~ .label-box label {
   background: url(../img/cross-big.svg) no-repeat center;
   border: none;
   cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  
+  display: none;
+  
+  width: 100%;
+  height: 100%;
+  
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-show {
+  display: block;
 }
