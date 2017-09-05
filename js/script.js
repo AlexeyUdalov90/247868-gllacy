@@ -74,23 +74,30 @@ formLogin.addEventListener("submit", function (evt) {
   }
 });
 
-btnFeedback.addEventListener("click", function (evt) {
-  evt.preventDefault();
+function OpenFeedback () {
   popupFeedback.classList.add("modal-feedback-show");
   overlay.classList.add("modal-show");
+};
+
+function CloseFeedback () {
+  popupFeedback.classList.remove("modal-feedback-show");
+  overlay.classList.remove("modal-show");
+};
+
+btnFeedback.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  OpenFeedback ();
 });
 
 closeFeedback.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popupFeedback.classList.remove("modal-feedback-show");
-  overlay.classList.remove("modal-show");
+  CloseFeedback ();
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (popupFeedback.classList.contains("modal-feedback-show")) {
-        popupFeedback.classList.remove("modal-feedback-show");
-        overlay.classList.remove("modal-show");
+        CloseFeedback ();
         }
   }
 });
