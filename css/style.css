@@ -232,7 +232,8 @@ img {
 
 .site-navigation-item:hover .site-submenu,
 .site-navigation-item a:focus ~ .site-submenu,
-.site-submenu > a:focus {
+.site-submenu > a:focus,
+.submenu-show {
   top: auto;
   left: 0;
   opacity: 1;
@@ -339,7 +340,8 @@ img {
   border-top: 5px solid transparent;
 }
 
-.user-navigation-item:hover .hover-block {
+.user-navigation-item:hover .hover-block,
+.hover-block-show {
   top: auto;
   right: 0;
   
@@ -972,6 +974,7 @@ body > input[type="radio"] {
   position: absolute;
   top: 60px;
   right: 27px;
+  z-index: 20;
   
   width: 252px;
   padding: 30px 25px;
@@ -994,6 +997,16 @@ body > input[type="radio"] {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.map {
+  position: relative;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*-----------------------------------INNER PAGE-CONTENT-------------------------------------*/
@@ -1687,6 +1700,13 @@ textarea:valid ~ .label-box label {
   cursor: pointer;
 }
 
+@keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
 .modal-overlay {
   position: fixed;
   top: 0px;
@@ -1703,4 +1723,9 @@ textarea:valid ~ .label-box label {
 
 .modal-show {
   display: block;
+}
+
+.modal-feedback-show {
+  display: block;
+  animation: bounce 0.6s;
 }
