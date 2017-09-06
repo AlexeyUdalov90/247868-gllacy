@@ -1,6 +1,6 @@
 var btnFeedback = document.querySelector(".button-feedback");
 var popupFeedback = document.querySelector(".modal-feedback");
-var closeFeedback = popupFeedback.querySelector(".close");
+var closeFeedback = document.querySelector(".modal-feedback .close");
 var overlay = document.querySelector(".modal-overlay");
 var linkLogin = document.querySelector(".link-login");
 var formLogin = document.querySelector(".login-form");
@@ -16,10 +16,63 @@ var formItemsSearch = searchBlock.querySelectorAll("form *");
 var loginBlock = document.querySelector(".link-login + .hover-block");
 var formItemsLogin = loginBlock.querySelectorAll("form *");
 
-//var basketBlock = document.querySelector(".link-basket + .basket");
+var basketBlock = document.querySelector(".link-basket + .basket");
+var basketItems = document.querySelectorAll(".basket *");
 
 
 var storage = localStorage.getItem("login");
+
+linkLogin.addEventListener("click", function (evt) {
+  evt.preventDefault();
+});
+
+linkLogin.addEventListener("mouseover", function (evt) {
+  evt.preventDefault();
+  
+  if (storage) {
+    login.value = storage;
+    password.focus();
+  } else {
+    login.focus();
+  }
+});
+
+formLogin.addEventListener("submit", function (evt) {
+  if (login.value && password.value) {
+    evt.preventDefault();
+    localStorage.setItem("login", login.value);
+  }
+});
+
+function OpenFeedback() {
+  popupFeedback.classList.add("modal-feedback-show");
+  overlay.classList.add("modal-show");
+};
+
+function CloseFeedback() {
+  popupFeedback.classList.remove("modal-feedback-show");
+  overlay.classList.remove("modal-show");
+};
+
+if (btnFeedback) {
+  btnFeedback.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    OpenFeedback ();
+  });
+
+  closeFeedback.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    CloseFeedback ();
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (popupFeedback.classList.contains("modal-feedback-show")) {
+          CloseFeedback ();
+          }
+    }
+  });
+};
 
 submenuLinks.forEach(function (item) {
   item.addEventListener("focus", function () {
@@ -51,53 +104,14 @@ formItemsLogin.forEach(function (item) {
   });
 });
 
-
-linkLogin.addEventListener("click", function (evt) {
-  evt.preventDefault();
-});
-
-linkLogin.addEventListener("mouseover", function (evt) {
-  evt.preventDefault();
+if (basketBlock) {
+  basketItems.forEach(function (item) {
+    item.addEventListener("focus", function () {
+      basketBlock.classList.add("basket-show");
+    });
   
-  if (storage) {
-    login.value = storage;
-    password.focus();
-  } else {
-    login.focus();
-  }
-});
-
-formLogin.addEventListener("submit", function (evt) {
-  if (login.value && password.value) {
-    evt.preventDefault();
-    localStorage.setItem("login", login.value);
-  }
-});
-
-function OpenFeedback () {
-  popupFeedback.classList.add("modal-feedback-show");
-  overlay.classList.add("modal-show");
+    item.addEventListener("blur", function () {
+      basketBlock.classList.remove("basket-show");
+    });
+  });
 };
-
-function CloseFeedback () {
-  popupFeedback.classList.remove("modal-feedback-show");
-  overlay.classList.remove("modal-show");
-};
-
-btnFeedback.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  OpenFeedback ();
-});
-
-closeFeedback.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  CloseFeedback ();
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popupFeedback.classList.contains("modal-feedback-show")) {
-        CloseFeedback ();
-        }
-  }
-});
