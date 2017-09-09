@@ -354,6 +354,10 @@ img {
   text-decoration: none;
 }
 
+.user-navigation-item .index-basket {
+  padding-right: 34px;
+}
+
 .user-navigation-item .link-search {
   padding: 8px;
 }
@@ -627,7 +631,7 @@ body > input[type="radio"] {
 
 .slide-title {
   width: 700px;
-  height: 115px;
+  min-height: 115px;
   margin: 0;
   margin: 0 auto;
   margin-bottom: 35px;
@@ -1503,6 +1507,10 @@ input[type="checkbox"]:focus + .checkbox-control
   margin-bottom: 18px;
 }
 
+.filter-form .range-container {
+  margin-right: 14px;
+}
+
 .select-container label {
   padding-left: 15px;
   margin-bottom: 5px;
@@ -1554,15 +1562,28 @@ input[type="checkbox"]:focus + .checkbox-control
   border-radius: 18px / 50%;
 }
 
+.richness .group {
+  padding-left: 14px;
+}
+
+.filler .group {
+  min-width: 670px;
+}
+
 .group p {
   margin: 0;
 }
 
 .richness p {
-  margin-right: 18px;
+  margin-right: 17px;
 }
+
 .filler p {
-  margin-right: 25px;
+  margin-right: 20px;
+}
+
+.filler p:nth-child(3) {
+  margin-right: 22px;
 }
 
 .richness p:last-child,
@@ -1724,7 +1745,12 @@ input[type="checkbox"]:focus + .checkbox-control
 }
 
 .button-feedback {
+  display: block;
   width: 100%;
+  
+  text-align: center;
+  
+  box-sizing: border-box;
 }
 
 .social-button .image {
@@ -1861,7 +1887,7 @@ input[type="checkbox"]:focus + .checkbox-control
   line-height: 18px;
 }
 
-.footer-copyright .logo-HTML-Academy {
+.footer-copyright .logo-html-academy {
   display: inline-block;
   vertical-align: top;
   width: 110px;
