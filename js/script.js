@@ -47,12 +47,12 @@ formLogin.addEventListener("submit", function (evt) {
 function OpenFeedback() {
   popupFeedback.classList.add("modal-feedback-show");
   overlay.classList.add("modal-show");
-};
+}
 
 function CloseFeedback() {
   popupFeedback.classList.remove("modal-feedback-show");
   overlay.classList.remove("modal-show");
-};
+}
 
 if (btnFeedback) {
   btnFeedback.addEventListener("click", function (evt) {
@@ -72,7 +72,7 @@ if (btnFeedback) {
           }
     }
   });
-};
+}
 
 submenuLinks.forEach(function (item) {
   item.addEventListener("focus", function () {
@@ -114,4 +114,4 @@ if (basketBlock) {
       basketBlock.classList.remove("basket-show");
     });
   });
-};
+}
