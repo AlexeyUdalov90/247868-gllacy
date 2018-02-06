@@ -22,7 +22,7 @@ img {
 }
 
 .viewport {
-  width: 100%;
+  min-width: 1200px;
 
   -webkit-transition: background-color 0.5s ease;
 
@@ -62,7 +62,6 @@ img {
 
 .content-wrapper {
   padding: 0 27px;
-
 }
 
 .visually-hidden {
@@ -1757,7 +1756,7 @@ input[type="checkbox"]:focus + .checkbox-control
   width: 32px;
   height: 32px;
 
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 
@@ -1767,7 +1766,7 @@ input[type="checkbox"]:focus + .checkbox-control
 }
 
 .social-button:active {
-  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .social-button:active .image {
@@ -1811,7 +1810,7 @@ input[type="checkbox"]:focus + .checkbox-control
 }
 
 .social-list-item {
-  margin-right: 11px;
+  margin-right: 17px;
 }
 
 .social-list-item svg {
@@ -1839,8 +1838,7 @@ input[type="checkbox"]:focus + .checkbox-control
   padding-top: 34px;
 }
 
-.footer-links li {
-  min-width: 112px;
+.footer-links > li {
   margin-right: 30px;
   margin-bottom: 4px;
 
